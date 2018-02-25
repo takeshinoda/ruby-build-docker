@@ -6,8 +6,12 @@ RUN apt-get update && \
                        libssl-dev libyaml-dev libreadline6-dev \
                        zlib1g-dev libncurses5-dev libffi-dev \
                        libgdbm3 libgdbm-dev libxml2 libxml2-dev \
-                       systemtap systemtap-sdt-dev strace gdb
+                       systemtap systemtap-sdt-dev strace gdb \
+                       vim silversearcher-ag
 
+RUN mkdir /tmp/mjit
+RUN mkdir /tools
+ADD tools/* /tools/
 WORKDIR /ruby
 
 CMD ["/bin/bash"]
