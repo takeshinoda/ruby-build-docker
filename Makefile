@@ -6,5 +6,5 @@ build:
 	docker build -t $(REPO):$(shell date +%Y%m%d) .
 
 run:
-	docker run -v $(RUBY_SRC):/ruby -it $(REPO):$(shell date +%Y%m%d)
+	docker run -v $(RUBY_SRC):/ruby -it $(REPO):$(TAG)
 
